@@ -81,29 +81,31 @@ The project is structured into three phases over a three-month period, each incr
     rm -rf logs plots
     ```
 
-# Usage
+## Usage
 
-## Data Loading and Preprocessing
+**Data Loading and Preprocessing**
 
-Load and preprocess EHR datasets using data_loader.py.
+  - Script: data_loader.py
+  
+  Loads EHR datasets, handles missing values, encodes categorical variables, scales features, and partitions data into non-IID client subsets.
 
-## Model Training
+**Model Training**
 
-Use simulate_client_training() to perform distributed model training.
+  - Function: simulate_client_training()
+  
+  Simulates distributed training across multiple clients, computes differentially private gradients using a custom DPAdam optimizer, and aggregates model updates.
 
-## Visualization and Monitoring
+**Visualization and Monitoring**
 
-Utilize visualization tools like Matplotlib and Plotly for tracking model performance.
+  - Utilize Matplotlib, Seaborn, and Plotly to:
+      - Track model performance metrics (accuracy, AUC-ROC).
+      - Monitor privacy budget consumption (ε).
+      - Visualize resource usage (CPU, memory) in real time.
 
-## Validation & Testing
-Integration using TensorFlow Federated and TensorFlow Privacy.
-Conduct weekly system evaluations against predefined success metrics.
-Perform comparative analysis using AUC-ROC curves to validate model performance.
+**Validation & Testing**
+  - Integrated using TensorFlow Federated and TensorFlow Privacy.
+  - Performed comparative analysis using AUC-ROC curves to validate model performance.
 
-## Future Work
-Extend to clinical settings for further validation.
-Explore advanced clustering and personalization techniques for extreme data skew management.
-
-## References
-Integration using TensorFlow Federated and TensorFlow Privacy.
-Validation with public datasets like MIMIC-III under regulatory constraints.
+**Future Work**
+  - Extend to clinical settings for further validation.
+  - Explore advanced clustering and personalization techniques for extreme data skew management.
