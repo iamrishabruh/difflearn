@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+
+# Virtual environment
+.env
+.venv/
+env/
+venv/
+
+# OS generated files
+.DS_Store
+
+# Editor/IDE directories
+.vscode/
+
+# Log files
+logs/
+*.log
+
+# Generated plots (if they are auto-generated and you prefer not to track them)
+plots/
+
+# Others (optional, customize as needed)
+*.swp
+Miniforge3-24.11.3-0-MacOSX-arm64.sh
